@@ -113,21 +113,27 @@
           position: relative;
           background-image: url("dog.jpg");
           background-size: cover;
-          height: 340px;
+          height:50vh;
+          z-index: 2;
+        
         }
         
-        .hero__article {
-          box-sizing: border-box;
-         background-color: #fff;
-         position: absolute;
-         bottom: 0;
-         height: 10%;
-         width: 100%;
-         color: #000;
-         padding:10px;
-        line-height:1.1em;
+        .hero article {
+         
           
-        }
+            box-sizing: border-box;
+            background-color: white;
+            background-color: rgba(255,255,255);
+            position: absolute;
+            bottom: 0;
+            height: 30%;
+            width: 100%;
+            color: black;
+            padding: 1em;
+            line-height:1.1em;
+            z-index: 7;
+          
+      }
         
         .top-news {
           max-height: 300px;
@@ -202,3 +208,176 @@
         .scores__table td:nth-child(5) {
           text-align: center;
         } 
+        .weather {
+          flex-grow: 1;
+          padding: 1em;
+        }
+        
+        .weather__location {
+          display: block;
+          font-weight: 300;
+          font-size: 1.5em;
+        }
+        
+        .weather__desc {
+          display: inline-block;
+          font-size: 1em;
+        }
+        
+        .weather__today {
+          width: 60%;
+          vertical-align: middle;
+        }
+        
+        .weather__today__image {
+          vertical-align: middle
+        }
+        
+        .weather__today__temp {
+          font-size: 2.8em;
+        }
+        
+        .weather__today__deg {
+          font-size: 2em;
+          display: inline-block;
+        }
+        
+        .weather__next__item {
+          display: inline-block;
+          width: 20%;
+          text-align: center;
+        }
+        
+        .weather__next__item span {
+          display: block;
+        }
+        
+        .weather__next__image {
+          width: 100%;
+        }
+        .snippet {
+          clear: both;
+          margin: 24px 0;
+          display: flex;
+          flex-wrap: wrap;
+        }
+        
+        
+        .snippet__image {
+          float: left;
+          margin-right: 10px;
+          order: 1;
+          width: 10vw;
+          height: 10vh;
+        }
+        
+        .snippet__title {
+          font-weight: 500;
+          order: 0;
+          width: 100%;
+          
+        }
+        
+        .snippet__title a {
+          text-decoration: none;
+          color: #666;
+          
+        padding:10px;
+        }
+        
+        .snippet__description {
+          order: 2;
+          width: 60%;
+          margin: 0;
+        }
+    
+          
+        
+        .snippet__title a:active {
+          text-decoration: underline;
+        }
+        
+        .snippet__title a {
+          text-decoration: none;
+          color: #666;
+          padding: 10px;
+        }
+        
+      footer {
+          border-top: 1px solid #E0E0E0;
+          padding: 10px;
+          width: 100%;
+          font-size: 15px;
+        }
+        
+        footer li {
+          display: inline-block;
+          margin: 0 10px;
+        }
+        
+        footer a {
+          text-decoration: none;
+          color: #333;
+          padding: 10px;
+        }
+        
+        
+
+        .content {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        
+        .header__menu {
+          display: none;
+        }
+        
+        .hero, .top-news, .scores, .weather, .recent-news {
+          order: 10;
+        }
+        
+        
+        
+        @media screen and (min-width: 610px) {
+          .hero {
+            order: 0;
+            width: 60vw;
+          }
+          .weather {
+            order: 1;
+            width: 40vw;
+          }
+        }
+        
+        @media screen and (min-width: 700px) {
+          .hero {
+            width: 50vw;
+          }
+          .top-news {
+            order: 2;
+            width: 50vw;
+          }
+          .scores {
+            order: 3;
+            width: 60vw;
+          }
+          .weather {
+            order: 1;
+          
+          }
+        }
+        
+        @media screen and (min-width: 850px) {
+          main, .header__inner, .nav, .content {
+            width: 100vw;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          .hero {
+            width: 100vw;
+          }  
+          
+        }
+        
+
+
