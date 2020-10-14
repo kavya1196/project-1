@@ -111,7 +111,7 @@
         .hero {
           width: 100vw;
           position: relative;
-          background-image: url("dog.jpg");
+          background-image:  url("./images/dog.jpg");;
           background-size: cover;
           height:50vh;
           z-index: 2;
